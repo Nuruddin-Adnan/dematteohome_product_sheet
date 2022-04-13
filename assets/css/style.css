@@ -52,13 +52,13 @@ strong {
     color: var(--blue);
 }
 .table > :not(caption) > * > *{
-    padding: 1rem 0.5rem;
+    padding: 1rem 0rem;
 }
 
 
 .table th:first-child,
 .table td:first-child {
-    width: 160px;
+    width: 120px;
     white-space: nowrap;
     padding-left: 0;
 }
@@ -69,15 +69,22 @@ strong {
 }
 
 .table th {
+    font-size: 11px;
     color: var(--dark-blue);
     padding-bottom: 25px !important;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+
+.table td {
+    font-size: 11px;
 }
 
 .table td a {
     color: var(--blue);
     display: block;
     padding-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 10px;
     transition: all 0.2s linear;
 }
 .table td a:hover {
@@ -98,14 +105,17 @@ strong {
 }
 
 .table-striped>tbody>tr.featured-product:hover>* {
-    --bs-table-accent-bg: var(--dark-blue);
+    --bs-table-accent-bg: var(--blue);
+    opacity: 0.9;
+    /* --bs-table-accent-bg: #d5e5fb;
+    color: var(--blue); */
 }
 
 .table .featured-product td a {
     color: var(--white);
 }
 .table .featured-product td a:hover {
-    color: var(--white);
+    color: #95b9ff;
 }
 /* featured product end */
 /*################ product-sheet css end ################*/
