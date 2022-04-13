@@ -40,39 +40,6 @@ strong {
 
 
 /*################ product-sheet css start ################*/
-.table th:first-child,
-.table td:first-child {
-    width: 100px;
-}
-.table th:last-child,
-.table td:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.table th:nth-child(2),
-.table td:nth-child(2) {
-    width: 55px;
-}
-
-.table th:nth-child(3),
-.table td:nth-child(3) {
-    width: 100px;
-}
-
-.table th:nth-child(4),
-.table th:nth-child(5),
-.table th:nth-child(6),
-.table td:nth-child(4),
-.table td:nth-child(5),
-.table td:nth-child(6) {
-    width: 50px;
-}
-
-.table th {
-    color: var(--dark-blue);
-    padding-bottom: 25px !important;
-}
 .table-striped>tbody>tr:nth-of-type(odd)>* {
     --bs-table-accent-bg: var(--light-blue);
     color: var(--blue);
@@ -88,10 +55,29 @@ strong {
     padding: 1rem 0.5rem;
 }
 
+
+.table th:first-child,
+.table td:first-child {
+    width: 160px;
+    white-space: nowrap;
+    padding-left: 0;
+}
+.table th:last-child,
+.table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.table th {
+    color: var(--dark-blue);
+    padding-bottom: 25px !important;
+}
+
 .table td a {
     color: var(--blue);
     display: block;
     padding-bottom: 10px;
+    padding-left: 30px;
     transition: all 0.2s linear;
 }
 .table td a:hover {
