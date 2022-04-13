@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+:root {
+    --blue: #203d78;
+    --dark-blue: #1f3c78;
+    --light-blue: #e3edfb;
+    --white: #ffffff;
+}
+  
+
+/*################ global css start ################*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+/*################ global css end ################*/
+
+
+/*################ config css start ################*/
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--blue);
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+}
+/*################ config css end ################*/
+
+
+
+/*################ product-sheet css start ################*/
+.table th:first-child,
+.table td:first-child {
+    width: 100px;
+}
+.table th:last-child,
+.table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 55px;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 100px;
+}
+
+.table th:nth-child(4),
+.table th:nth-child(5),
+.table th:nth-child(6),
+.table td:nth-child(4),
+.table td:nth-child(5),
+.table td:nth-child(6) {
+    width: 50px;
+}
+
+.table th {
+    color: var(--dark-blue);
+    padding-bottom: 25px !important;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--light-blue);
+    color: var(--blue);
+}
+.table-striped>tbody>tr:nth-of-type(odd):hover>*,
+.table-striped>tbody>tr:nth-of-type(even):hover>* {
+    --bs-table-accent-bg: #d5e5fb;
+}
+.table-striped>tbody>tr:nth-of-type(even)>* {
+    color: var(--blue);
+}
+.table > :not(caption) > * > *{
+    padding: 1rem 0.5rem;
+}
+
+.table td a {
+    color: var(--blue);
+    display: block;
+    padding-bottom: 10px;
+    transition: all 0.2s linear;
+}
+.table td a:hover {
+    color: #3c6ccb;
+}
+.table td img {
+   box-shadow: 15px 0 20px rgba(11, 12, 12, 0.07);
+}
+
+.table td i {
+    font-size: 20px;
+}
+
+/* featured product start */
+.table-striped>tbody>tr.featured-product>* {
+    --bs-table-accent-bg: var(--blue);
+    color: var(--white);
+}
+
+.table-striped>tbody>tr.featured-product:hover>* {
+    --bs-table-accent-bg: var(--dark-blue);
+}
+
+.table .featured-product td a {
+    color: var(--white);
+}
+.table .featured-product td a:hover {
+    color: var(--white);
+}
+/* featured product end */
+/*################ product-sheet css end ################*/
