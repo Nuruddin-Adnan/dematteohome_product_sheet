@@ -83,7 +83,7 @@ strong {
 .table td a {
     color: var(--blue);
     display: block;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-left: 10px;
     transition: all 0.2s linear;
 }
