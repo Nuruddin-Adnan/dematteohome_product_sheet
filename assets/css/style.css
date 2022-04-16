@@ -21,6 +21,7 @@ a {
 
 ul, li {
     list-style: none;
+    margin-bottom: 0;
 }
 /*################ global css end ################*/
 
@@ -35,87 +36,102 @@ body {
 strong {
     font-weight: 700;
 }
+
+i {
+    font-size: 14px;
+}
 /*################ config css end ################*/
 
 
 
-/*################ product-sheet css start ################*/
-.table-striped>tbody>tr:nth-of-type(odd)>* {
-    --bs-table-accent-bg: var(--light-blue);
-    color: var(--blue);
-}
-.table-striped>tbody>tr:nth-of-type(odd):hover>*,
-.table-striped>tbody>tr:nth-of-type(even):hover>* {
-    --bs-table-accent-bg: #d5e5fb;
-}
-.table-striped>tbody>tr:nth-of-type(even)>* {
-    color: var(--blue);
-}
-.table > :not(caption) > * > *{
-    padding: 1rem 0rem;
+/*################ tabella-comparative css start ################*/
+
+/* heading css */
+ul.heading li{
+    color: var(--dark-blue);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 10px 0px;
 }
 
-
-.table th:first-child,
-.table td:first-child {
-    width: 120px;
-    white-space: nowrap;
-    padding-left: 0;
+/* background css */
+ul.bg-light-blue {
+    background-color: var(--light-blue);
 }
-.table th:last-child,
-.table td:last-child {
+ul.content:hover {
+    background-color: #d5e5fb;
+}
+ul.featured-content {
+    background-color: var(--blue);
+}
+ul.featured-content:hover {
+    background-color: var(--blue);
+    opacity: 0.9;
+}
+
+/* content css */
+ul.heading li {
+    padding: 10px 5px;
+}
+
+@media (max-width: 360px){
+    ul.heading li {
+        padding: 10px 2px;
+        font-size: 10px;
+    }
+}
+
+ul.content {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding: 10px 16px 10px 0;
 }
 
-.table th {
-    font-size: 11px;
-    color: var(--dark-blue);
-    padding-bottom: 25px !important;
-    padding-left: 7px !important;
-    padding-right: 7px !important;
-}
-
-.table td {
+ul.content li {
+    color: var(--blue);
     font-size: 10px;
 }
 
-.table td a {
+ul.content li a{
     color: var(--blue);
     display: block;
     padding-bottom: 5px;
     padding-left: 10px;
     transition: all 0.2s linear;
+    white-space: nowrap
 }
-.table td a:hover {
+
+ul.content li a:hover {
     color: #3c6ccb;
 }
-.table td img {
-   box-shadow: 15px 0 20px rgba(11, 12, 12, 0.07);
-}
 
-.table td i {
-    font-size: 20px;
-}
 
-/* featured product start */
-.table-striped>tbody>tr.featured-product>* {
-    --bs-table-accent-bg: var(--blue);
+/* featured content */
+ul.content.featured-content li,
+ul.content.featured-content li a{
     color: var(--white);
 }
 
-.table-striped>tbody>tr.featured-product:hover>* {
-    --bs-table-accent-bg: var(--blue);
-    opacity: 0.9;
-    /* --bs-table-accent-bg: #d5e5fb;
-    color: var(--blue); */
-}
-
-.table .featured-product td a {
-    color: var(--white);
-}
-.table .featured-product td a:hover {
+ul.content.featured-content li a:hover {
     color: #95b9ff;
 }
-/* featured product end */
-/*################ product-sheet css end ################*/
+
+/* img */
+ul li img {
+    box-shadow: 15px 0 20px rgba(11, 12, 12, 0.07);
+}
+
+/* width set css */
+ul li:first-child {
+    width: 100px;
+    flex-shrink: 0;
+}
+ul li:nth-child(3) {
+    width: 65px;
+    text-align: center;
+}
+ul li:nth-child(5) {
+    width: 35px;
+    text-align: center;
+}
+/*################ tabella-comparative css end ################*/
